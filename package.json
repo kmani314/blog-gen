@@ -1,0 +1,14 @@
+{
+  "name": "blog-gen",
+  "version": "1.0.0",
+  "description": "generates blog from markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "krishna mani",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.1.0"
+  }
+}
