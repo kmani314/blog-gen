@@ -8,6 +8,9 @@
   },
   "author": "krishna mani",
   "license": "ISC",
+  "bin": {
+   "blog-gen": "./index.js"
+ },
   "devDependencies": {
     "eslint": "^5.1.0"
   }
