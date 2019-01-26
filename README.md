@@ -20,7 +20,7 @@ title: your-title-goes-here
 date: your-date-goes-here
 -->
 ```
-
+```
 blog-gen regen|replace <file-to-be-replaced> <newfile>
 ```
 This replaces an old post using a new markdown file, in case you wanted to edit an older post.
