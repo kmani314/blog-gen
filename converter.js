@@ -73,8 +73,8 @@ exports.update = function (filename) {
 		console.log(`Success reading ${config.post_list_filename}`.green);
 		console.log(`Preparing to write to ${config.post_list_filename}`.blue);
 
-		let pattern = /(?=<!--HEAD-->)/gm;
-		let updatedAllPostsPage = array[0].replace(pattern, `\n<div class="linklist"><a class="linklist" href=\"${config.posts_folder}${array[1]["title"].replace(/ /g, '_')}.html">» ${array[1]["title"]} </a> »» ${array[1]["date"]}</div>\n`);
+		let pattern = /(?<=<!--HEAD-->)/gm;
+		let updatedAllPostsPage = array[0].replace(pattern, `\n<div><a class="link" href=\"${config.posts_folder}${array[1]["title"].replace(/ /g, '_')}">${array[1]["title"]}</a><p class="date">${array[1]["date"]}</p><div style="clear:both"></div></div>\n`);
 
 		return new Promise((resolve, reject) => {
 			fs.writeFile(config.post_list_filename, beautify(updatedAllPostsPage), 'utf8', (err) => {

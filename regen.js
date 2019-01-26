@@ -46,7 +46,7 @@ exports.regen = function (fileToBeReplaced, newFile) {
 		
 		let match = '.*' + path.basename(fileToBeReplaced) + '.*'
 		let allPattern = new RegExp(match, 'g');
-		let newAllHtml = allPostsPageData.replace(allPattern, `\n<div class="linklist"><a class="linklist" href=\"${config.posts_folder}${dict["title"].replace(/ /g, '_')}.html">» ${dict["title"]} </a> »» ${dict["date"]}</div>\n`);
+		let newAllHtml = allPostsPageData.replace(allPattern, `\n<div class="linklist"><a class="linklist" href=\"${config.posts_folder}${dict["title"].replace(/ /g, '_')}">» ${dict["title"]} </a> »» ${dict["date"]}</div>\n`);
 
 		let postPattern = /(?<=<!--start-->).*(?=<!--end-->)/gmsi;
 		
